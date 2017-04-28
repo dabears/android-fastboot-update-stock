@@ -16,3 +16,6 @@ a) This script is meant for the Nexus 6P, so if you have a different device you 
 7. Plug your phone into your computer, make sure USB Debugging is ON, etc..
 8. Go back to your adb installation folder and run the script as Administrator.
 9. Go nuts.
+10. To flash a twrp recovery you must download the appropriate recovery image from https://dl.twrp.me/angler/
+11. Rename the image to twrp-angler.img & move the image to your adb installation folder.
+12. Go bananas.
