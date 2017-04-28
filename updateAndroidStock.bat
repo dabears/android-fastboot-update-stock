@@ -25,8 +25,9 @@ ECHO 2) Reboot Bootloader
 ECHO 3) Flash All (make sure to rename bootloader and radio)
 ECHO 4) Flash Bootloader Only
 ECHO 5) Flash Radio Only
-ECHO 6) Flast boot, recovery, system and vendor Only
-ECHO 7) Exit
+ECHO 6) Flash boot, recovery, system and vendor Only
+ECHO 7) Flash TWRP Recovery
+ECHO 8) Exit
 ECHO.
 SET /p response=Select option:
 IF "%response%"=="1" GOTO BOOTLOADER
@@ -35,7 +36,8 @@ IF "%response%"=="3" GOTO BOOTLOADERCHECK
 IF "%response%"=="4" fastboot flash bootloader C:\adb\angler\bootloader-angler.img
 IF "%response%"=="5" fastboot flash bootloader C:\adb\angler\radio-angler.img
 IF "%response%"=="6" GOTO FLASHTHEREST
-IF "%response%"=="7" GOTO CLOSE
+IF "%response%"=="7" fastboot flash recovery C:\adb\twrp-angler.img
+IF "%response%"=="8" GOTO CLOSE
 GOTO MENU
 
 :BOOTLOADERCHECK
